@@ -46,6 +46,17 @@ const Header = () => {
       <nav className="bg-gray-900 border-gray-200 px-4 lg:px-6 py-2 dark:bg-gray-800 w-100 overflow-hidden">
         <div className="flex flex-wrap justify-between items-center flex-shrink-0">
           {/* cart icon  */}
+         
+          {/* logo  */}
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/images/pokemon.png"
+              alt="pokemon"
+              width={150}
+              height={100}
+              className="mr-3"
+            />
+          </Link>
           <div className="flex">
             <Link
               href="/cart"
@@ -73,16 +84,9 @@ const Header = () => {
               {cart?.count}
             </small>
           </div>
-          {/* logo  */}
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/images/pokemon.png"
-              alt="pokemon"
-              width={150}
-              height={100}
-              className="mr-3"
-            />
-          </Link>
+
+
+
           {/* Login/Logout */}
           <div className="flex">
             <span className="mt-2 mr-4 text-rose-700 font-bold">
