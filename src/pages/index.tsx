@@ -8,6 +8,7 @@ import { GetStaticProps } from "next";
 import SetAccordion from "@/components/SetAccordion/SetAccordion";
 import SetSeries from "@/utilities/SetSeries";
 import ScrollButton from "@/components/ScrollButton/ScrollButton";
+import MarqueeCard from "@/components/Marquee/Marquee";
 
 //SSG
 export const getStaticProps: GetStaticProps<{
@@ -34,8 +35,9 @@ const Home = () => {
   return (
     <div className="bg-gray-300">
       <Slider />
+      <MarqueeCard/>
       <Carousel />
-
+      
       <h1 className="font-bold text-3xl pt-3 mt-20 pb-10 text-center text-black">
         All Pokemon TCG
         <hr className="w-[200px] border-b-4 border-orange-500 mt-3 mx-auto font-bold border-top-3 text-red-500" />
