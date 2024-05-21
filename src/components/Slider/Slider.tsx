@@ -17,15 +17,17 @@ const Slider = () => {
   }, [slide]);
 
   return (
-    <div className="carousel  overflow-hidden">
-      <div className="carousel-item relative">
-        <Image
-          src={SliderImage[slide]}
-          alt={`Slide ${slide + 1}`}
-          width={1920}
-          height={550}
-          className="w-screen object-fit-contain"
-        />
+    <div className="px-6 py-6 rounded-md">
+      <div className="carousel overflow-hidden ">
+        <div className="carousel-item relative">
+          <Image
+            src={SliderImage[slide]}
+            alt={`Slide ${slide + 1}`}
+            width={1920}
+            height={550}
+            className="w-screen object-fit-contain"
+          />
+        </div>
       </div>
     </div>
   );

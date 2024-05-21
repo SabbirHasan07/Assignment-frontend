@@ -35,7 +35,7 @@ const ShowCart = ({ item }: { item: StampedSet }) => {
 
   return (
     <>
-      <div className="flex flex-col min-h-[250px] bg-orange-300 m-3 ">
+      <div className="flex flex-col min-h-[300px] bg-gray-300 m-3 rounded ">
         <Image
           src={item?.set?.images?.logo}
           alt={"images"}
@@ -45,7 +45,7 @@ const ShowCart = ({ item }: { item: StampedSet }) => {
           className="h-36 w-32 my-3 mx-auto"
         />
         <button
-          className="block my-5 w-24 p-3 bg-red-500 mx-auto"
+          className="block my-5 w-24 p-3 bg-orange-500 text-white font-bold mx-auto rounded"
           type="button"
           onClick={() => {
             decrement();

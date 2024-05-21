@@ -43,7 +43,7 @@ const Header = () => {
       <div>
         <Toaster position="bottom-right" reverseOrder={false} />
       </div>
-      <nav className="bg-gray-900 border-gray-200 px-4 lg:px-6 py-2 dark:bg-gray-800 w-100 overflow-hidden">
+      <nav className="bg-gray-500 border-gray-200 px-4 lg:px-6 py-2 dark:bg-gray-800 w-100 overflow-hidden">
         <div className="flex flex-wrap justify-between items-center flex-shrink-0">
           {/* cart icon  */}
          
@@ -63,7 +63,7 @@ const Header = () => {
               className="flex items-center space-x-3 rtl:space-x-reverse mr-1"
             >
               <svg
-                className="w-6 h-6 text-white"
+                className="w-6 h-6 text-gray-200"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"
@@ -80,7 +80,7 @@ const Header = () => {
                 />
               </svg>
             </Link>
-            <small className="text-white text-center w-4 h-4 rounded bg-red-700 text-xs">
+            <small className="text-white text-center w-4 h-4 rounded bg-gray-700 text-xs">
               {cart?.count}
             </small>
           </div>
@@ -93,7 +93,7 @@ const Header = () => {
               {username}
             </span>
             <Button
-              className="flex justify-center items-center w-24 h-10 pr-1 text-white bg-blue-400 hover:bg-blue-700"
+              className="rounded flex justify-center items-center w-24 h-10 pr-1 text-white bg-blue-400 hover:bg-blue-700"
               onClick={handleLogin}
             >
               {login}

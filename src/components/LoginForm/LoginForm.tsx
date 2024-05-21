@@ -39,14 +39,12 @@ const LoginForm = () => {
         </div>
       </div>
 
-      <div className="w-full bg-black lg:w-1/2 flex items-center justify-center">
+      <div className="w-full bg-gray-700 lg:w-1/2 flex items-center justify-center">
         <div className="max-w-md w-full p-6">
           <h1 className="text-3xl font-semibold mb-6 text-white text-center">
             Sign in
           </h1>
-          <h1 className="text-sm font-semibold mb-6 text-orange-200 text-center">
-            Join to Our Community with all time access and free{" "}
-          </h1>
+          
 
           <form
             action="#"
