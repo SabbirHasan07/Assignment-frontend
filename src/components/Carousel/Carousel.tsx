@@ -12,9 +12,9 @@ const Carousel = () => {
     <>
       <h1 className="font-bold text-3xl pt-3 mt-16 pb-6 text-center text-black">
         Featured Cards
-        <hr className="w-[150px] border-b-4 border-red-500 mt-3 mx-auto font-bold border-top-3 text-red-500" />
+        <hr className="w-[50%] border-b-4 border-orange-500 mt-3 mx-auto font-bold border-top-3 text-red-500" />
       </h1>
-      <div className="w-3/4 m-auto">
+      <div className=" m-auto">
         <div className="mt-8">
           <Slider {...CarouselSettings}>
             {CarouselImage.map((data) => (

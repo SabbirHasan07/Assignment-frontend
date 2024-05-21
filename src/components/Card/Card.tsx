@@ -10,7 +10,7 @@ const Card = (props: { item: PokemonTCG.Set }) => {
   const { images, ...info } = props.item;
   return (
     <>
-      <div className=" bg-gray-600 rounded-lg hover:scale-110 m-3 p-3">
+      <div className=" bg-gray-400 rounded-lg hover:scale-110 m-3 p-3">
         <Link href={`/sets/${info.id}`} className="">
           <CardImage imageUrl={images} />
         </Link>

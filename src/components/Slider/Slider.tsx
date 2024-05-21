@@ -17,8 +17,8 @@ const Slider = () => {
   }, [slide]);
 
   return (
-    <div className="carousel w-full overflow-hidden">
-      <div className="carousel-item relative w-full">
+    <div className="carousel  overflow-hidden">
+      <div className="carousel-item relative">
         <Image
           src={SliderImage[slide]}
           alt={`Slide ${slide + 1}`}

@@ -38,7 +38,7 @@ const Home = () => {
 
       <h1 className="font-bold text-3xl pt-3 mt-20 pb-10 text-center text-black">
         All Pokemon TCG
-        <hr className="w-[200px] border-b-4 border-red-500 mt-3 mx-auto font-bold border-top-3 text-red-500" />
+        <hr className="w-[200px] border-b-4 border-orange-500 mt-3 mx-auto font-bold border-top-3 text-red-500" />
       </h1>
 
       <div className="mx-16 pb-5">
