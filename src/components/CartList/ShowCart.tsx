@@ -35,7 +35,7 @@ const ShowCart = ({ item }: { item: StampedSet }) => {
 
   return (
     <>
-      <div className="flex flex-col min-h-[250px] bg-blue-300 m-3 ">
+      <div className="flex flex-col min-h-[250px] bg-orange-300 m-3 ">
         <Image
           src={item?.set?.images?.logo}
           alt={"images"}
