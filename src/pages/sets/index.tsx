@@ -1,13 +1,9 @@
 import { QueryKeys } from "@/models/enums";
 import { useSets } from "@/hooks/react-query-hooks";
 import { getAllSets } from "@/service/pokemon.service";
-import Carousel from "@/components/Carousel/Carousel";
-import Slider from "@/components/Slider/Slider";
+import Card from "@/components/Card/Card";
 import { DehydratedState, QueryClient, dehydrate } from "@tanstack/react-query";
 import { GetStaticProps } from "next";
-import SetAccordion from "@/components/SetAccordion/SetAccordion";
-import SetSeries from "@/utilities/SetSeries";
-import ScrollButton from "@/components/ScrollButton/ScrollButton";
 
 //SSG
 export const getStaticProps: GetStaticProps<{
@@ -21,34 +17,28 @@ export const getStaticProps: GetStaticProps<{
       return sets;
     },
   });
-  return { props: { dehydratedState: dehydrate(queryClient) }, revalidate: 30 };
+  return { props: { dehydratedState: dehydrate(queryClient) } };
 };
 
-// Home Page
-const Home = () => {
+// All PokemonTCG Set page
+const LoadCard = () => {
   const setsObject = useSets();
   const sets = setsObject.data;
-
   sets?.sort((a, b) => Date.parse(b.releaseDate) - Date.parse(a.releaseDate));
 
   return (
-    <div className="bg-gray-300">
-      <Slider />
-      <Carousel />
-
+    <>
       <h1 className="font-bold text-3xl pt-3 mt-20 pb-10 text-center text-black">
         All Pokemon TCG
         <hr className="w-[200px] border-b-4 border-red-500 mt-3 mx-auto font-bold border-top-3 text-red-500" />
       </h1>
-
-      <div className="mx-16 pb-5">
-        {SetSeries.map((set) => (
-          <SetAccordion key={set.name} accordionProps={set} />
-        ))}
+      <div className="py-20 gap-y-10 place-items-center grid grid-cols-3">
+        {sets
+          ? sets.map((item) => <Card item={item} key={item.id} />)
+          : "Loading..."}
       </div>
-      <ScrollButton />
-    </div>
+    </>
   );
 };
 
-export default Home;
+export default LoadCard;
