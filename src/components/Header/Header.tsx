@@ -28,7 +28,7 @@ const Header = () => {
     updateLogin("Login");
     updateUsername("");
     router.push("/login");
-    toast.success("Logged out successfully !");
+    if(login==="Log Out")toast.success("Logged out successfully !");
   };
 
   useEffect(() => {
